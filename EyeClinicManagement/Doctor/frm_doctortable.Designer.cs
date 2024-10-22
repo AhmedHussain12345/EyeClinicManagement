@@ -94,7 +94,7 @@
             this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Update.ForeColor = System.Drawing.SystemColors.Window;
-            this.Update.Location = new System.Drawing.Point(474, 96);
+            this.Update.Location = new System.Drawing.Point(483, 96);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(175, 60);
             this.Update.TabIndex = 9;
@@ -110,7 +110,7 @@
             this.Delete.ForeColor = System.Drawing.SystemColors.Window;
             this.Delete.Location = new System.Drawing.Point(676, 95);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(175, 60);
+            this.Delete.Size = new System.Drawing.Size(175, 61);
             this.Delete.TabIndex = 10;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = false;

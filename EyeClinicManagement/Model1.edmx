@@ -5,6 +5,13 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="EyeClinicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="opdservice" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="tblDoctor">
           <Key>
             <PropertyRef Name="ID" />
@@ -16,6 +23,7 @@
           <Property Name="Specialization" Type="varchar" MaxLength="100" />
           <Property Name="Address" Type="varchar" MaxLength="100" />
           <Property Name="Message" Type="varchar" MaxLength="100" />
+          <Property Name="Image" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="tblOpd">
           <Key>
@@ -36,12 +44,12 @@
           <Property Name="Remarks" Type="varchar" MaxLength="100" />
           <Property Name="Services" Type="varchar" MaxLength="100" />
           <Property Name="Eye" Type="varchar" MaxLength="50" />
-          <Property Name="Qty" Type="int" />
           <Property Name="Rate" Type="decimal" Precision="18" Scale="4" />
           <Property Name="Amount" Type="decimal" Precision="18" Scale="4" />
           <Property Name="Image" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityContainer Name="EyeClinicModelStoreContainer">
+          <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblDoctor" EntityType="Self.tblDoctor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblOpd" EntityType="Self.tblOpd" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -50,6 +58,13 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EyeClinicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="opdservice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
         <EntityType Name="tblDoctor">
           <Key>
             <PropertyRef Name="ID" />
@@ -61,6 +76,7 @@
           <Property Name="Specialization" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Message" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblOpd">
           <Key>
@@ -81,12 +97,12 @@
           <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Services" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Eye" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Qty" Type="Int32" />
           <Property Name="Rate" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="Amount" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="EyeClinicEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EyeClinicEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Services" EntityType="Self.Service" />
           <EntitySet Name="tblDoctors" EntityType="Self.tblDoctor" />
           <EntitySet Name="tblOpds" EntityType="Self.tblOpd" />
         </EntityContainer>
@@ -95,7 +111,15 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EyeClinicModelStoreContainer" CdmEntityContainer="EyeClinicEntities">
+        <EntityContainerMapping StorageEntityContainer="EyeClinicModelStoreContainer" CdmEntityContainer="EyeClinicEntities1">
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="EyeClinicModel.Service">
+              <MappingFragment StoreEntitySet="Service">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="opdservice" ColumnName="opdservice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tblDoctors">
             <EntityTypeMapping TypeName="EyeClinicModel.tblDoctor">
               <MappingFragment StoreEntitySet="tblDoctor">
@@ -106,6 +130,7 @@
                 <ScalarProperty Name="Specialization" ColumnName="Specialization" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -127,7 +152,6 @@
                 <ScalarProperty Name="Remarks" ColumnName="Remarks" />
                 <ScalarProperty Name="Services" ColumnName="Services" />
                 <ScalarProperty Name="Eye" ColumnName="Eye" />
-                <ScalarProperty Name="Qty" ColumnName="Qty" />
                 <ScalarProperty Name="Rate" ColumnName="Rate" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="Image" ColumnName="Image" />

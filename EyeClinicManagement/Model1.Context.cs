@@ -13,10 +13,10 @@ namespace EyeClinicManagement
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EyeClinicEntities : DbContext
+    public partial class EyeClinicEntities1 : DbContext
     {
-        public EyeClinicEntities()
-            : base("name=EyeClinicEntities")
+        public EyeClinicEntities1()
+            : base("name=EyeClinicEntities1")
         {
         }
     
@@ -25,6 +25,7 @@ namespace EyeClinicManagement
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<tblDoctor> tblDoctors { get; set; }
         public virtual DbSet<tblOpd> tblOpds { get; set; }
     }

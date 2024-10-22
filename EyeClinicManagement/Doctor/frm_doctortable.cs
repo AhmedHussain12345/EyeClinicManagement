@@ -19,7 +19,7 @@ namespace EyeClinicManagement.Doctor
     {
         int id = 0;
         tblDoctor model = new tblDoctor();
-        EyeClinicEntities db = new EyeClinicEntities();
+        EyeClinicEntities1 db = new EyeClinicEntities1();
        
         public frm_doctortable()
         {

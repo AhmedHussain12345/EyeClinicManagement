@@ -44,6 +44,8 @@
             this.doc_name = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Clear = new System.Windows.Forms.Button();
+            this.btnUpload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.btn_docsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_docsubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_docsubmit.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_docsubmit.Location = new System.Drawing.Point(344, 571);
+            this.btn_docsubmit.Location = new System.Drawing.Point(364, 535);
             this.btn_docsubmit.Name = "btn_docsubmit";
             this.btn_docsubmit.Size = new System.Drawing.Size(158, 51);
             this.btn_docsubmit.TabIndex = 7;
@@ -76,7 +78,7 @@
             this.richTextBox_address.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.richTextBox_address.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_address.Location = new System.Drawing.Point(234, 322);
+            this.richTextBox_address.Location = new System.Drawing.Point(235, 295);
             this.richTextBox_address.Name = "richTextBox_address";
             this.richTextBox_address.Size = new System.Drawing.Size(385, 96);
             this.richTextBox_address.TabIndex = 5;
@@ -87,7 +89,7 @@
             this.richTextBox_msg.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.richTextBox_msg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_msg.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_msg.Location = new System.Drawing.Point(234, 433);
+            this.richTextBox_msg.Location = new System.Drawing.Point(235, 397);
             this.richTextBox_msg.Name = "richTextBox_msg";
             this.richTextBox_msg.Size = new System.Drawing.Size(385, 96);
             this.richTextBox_msg.TabIndex = 6;
@@ -98,7 +100,7 @@
             this.textBox_specialization.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox_specialization.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_specialization.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_specialization.Location = new System.Drawing.Point(234, 276);
+            this.textBox_specialization.Location = new System.Drawing.Point(235, 255);
             this.textBox_specialization.Name = "textBox_specialization";
             this.textBox_specialization.Size = new System.Drawing.Size(385, 34);
             this.textBox_specialization.TabIndex = 4;
@@ -108,7 +110,7 @@
             this.textBox_age.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox_age.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_age.Location = new System.Drawing.Point(234, 179);
+            this.textBox_age.Location = new System.Drawing.Point(234, 175);
             this.textBox_age.Name = "textBox_age";
             this.textBox_age.Size = new System.Drawing.Size(385, 34);
             this.textBox_age.TabIndex = 2;
@@ -118,7 +120,7 @@
             this.textBox_phone.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox_phone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_phone.Location = new System.Drawing.Point(234, 228);
+            this.textBox_phone.Location = new System.Drawing.Point(235, 215);
             this.textBox_phone.Name = "textBox_phone";
             this.textBox_phone.Size = new System.Drawing.Size(385, 34);
             this.textBox_phone.TabIndex = 3;
@@ -137,7 +139,7 @@
             // 
             this.doc_msg.AutoSize = true;
             this.doc_msg.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doc_msg.Location = new System.Drawing.Point(34, 438);
+            this.doc_msg.Location = new System.Drawing.Point(35, 402);
             this.doc_msg.Name = "doc_msg";
             this.doc_msg.Size = new System.Drawing.Size(112, 29);
             this.doc_msg.TabIndex = 19;
@@ -147,7 +149,7 @@
             // 
             this.doc_address.AutoSize = true;
             this.doc_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doc_address.Location = new System.Drawing.Point(34, 327);
+            this.doc_address.Location = new System.Drawing.Point(35, 300);
             this.doc_address.Name = "doc_address";
             this.doc_address.Size = new System.Drawing.Size(102, 29);
             this.doc_address.TabIndex = 18;
@@ -157,7 +159,7 @@
             // 
             this.doc_phone.AutoSize = true;
             this.doc_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doc_phone.Location = new System.Drawing.Point(34, 233);
+            this.doc_phone.Location = new System.Drawing.Point(35, 220);
             this.doc_phone.Name = "doc_phone";
             this.doc_phone.Size = new System.Drawing.Size(83, 29);
             this.doc_phone.TabIndex = 17;
@@ -167,7 +169,7 @@
             // 
             this.doc_age.AutoSize = true;
             this.doc_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doc_age.Location = new System.Drawing.Point(34, 184);
+            this.doc_age.Location = new System.Drawing.Point(34, 180);
             this.doc_age.Name = "doc_age";
             this.doc_age.Size = new System.Drawing.Size(56, 29);
             this.doc_age.TabIndex = 16;
@@ -177,7 +179,7 @@
             // 
             this.doc_specialization.AutoSize = true;
             this.doc_specialization.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doc_specialization.Location = new System.Drawing.Point(34, 281);
+            this.doc_specialization.Location = new System.Drawing.Point(35, 260);
             this.doc_specialization.Name = "doc_specialization";
             this.doc_specialization.Size = new System.Drawing.Size(163, 29);
             this.doc_specialization.TabIndex = 15;
@@ -195,9 +197,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(683, 198);
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(683, 184);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(306, 283);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -206,11 +210,39 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(678, 140);
+            this.label1.Location = new System.Drawing.Point(678, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 29);
+            this.label1.Size = new System.Drawing.Size(88, 29);
             this.label1.TabIndex = 29;
-            this.label1.Text = "Upload Picture";
+            this.label1.Text = "Picture";
+            // 
+            // Clear
+            // 
+            this.Clear.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.ForeColor = System.Drawing.SystemColors.Window;
+            this.Clear.Location = new System.Drawing.Point(528, 535);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(92, 51);
+            this.Clear.TabIndex = 30;
+            this.Clear.Text = "Clear";
+            this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnUpload.Location = new System.Drawing.Point(865, 478);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(124, 51);
+            this.btnUpload.TabIndex = 31;
+            this.btnUpload.Text = "Upload";
+            this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // frm_doctoradd
             // 
@@ -218,6 +250,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1023, 663);
+            this.Controls.Add(this.btnUpload);
+            this.Controls.Add(this.Clear);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_docfrmheading);
@@ -262,5 +296,7 @@
         private System.Windows.Forms.Label doc_name;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Button btnUpload;
     }
 }
