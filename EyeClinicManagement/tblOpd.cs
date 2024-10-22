@@ -29,7 +29,6 @@ namespace EyeClinicManagement
         public string Remarks { get; set; }
         public string Services { get; set; }
         public string Eye { get; set; }
-        public Nullable<int> Qty { get; set; }
         public Nullable<decimal> Rate { get; set; }
         public Nullable<decimal> Amount { get; set; }
         public string Image { get; set; }

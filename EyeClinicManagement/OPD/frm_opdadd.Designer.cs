@@ -31,16 +31,13 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.combo_DoctorsOPD = new System.Windows.Forms.ComboBox();
             this.btn_save = new System.Windows.Forms.Button();
-            this.btn_pos = new System.Windows.Forms.Button();
             this.btn_posprint = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.box_qty = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.box_amount = new System.Windows.Forms.TextBox();
             this.combo_eye = new System.Windows.Forms.ComboBox();
             this.combo_services = new System.Windows.Forms.ComboBox();
             this.box_cnic = new System.Windows.Forms.TextBox();
-            this.box_gender = new System.Windows.Forms.TextBox();
             this.box_contact = new System.Windows.Forms.TextBox();
             this.box_remarks = new System.Windows.Forms.TextBox();
             this.box_rate = new System.Windows.Forms.TextBox();
@@ -53,7 +50,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -71,6 +67,8 @@
             this.lbl_date = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.Button();
             this.lbl_addopd = new System.Windows.Forms.Label();
+            this.box_gender = new System.Windows.Forms.ComboBox();
+            this.btn_upload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,50 +79,40 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(234, 168);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(163, 30);
-            this.dateTimePicker1.TabIndex = 112;
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // combo_DoctorsOPD
             // 
             this.combo_DoctorsOPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combo_DoctorsOPD.FormattingEnabled = true;
             this.combo_DoctorsOPD.Items.AddRange(new object[] {
-            "Left",
-            "Right"});
-            this.combo_DoctorsOPD.Location = new System.Drawing.Point(431, 211);
+            "Anwar",
+            "Lateef"});
+            this.combo_DoctorsOPD.Location = new System.Drawing.Point(431, 212);
             this.combo_DoctorsOPD.Name = "combo_DoctorsOPD";
             this.combo_DoctorsOPD.Size = new System.Drawing.Size(318, 33);
-            this.combo_DoctorsOPD.TabIndex = 111;
+            this.combo_DoctorsOPD.TabIndex = 2;
             // 
             // btn_save
             // 
             this.btn_save.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(614, 692);
+            this.btn_save.Location = new System.Drawing.Point(628, 701);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(161, 52);
-            this.btn_save.TabIndex = 110;
+            this.btn_save.TabIndex = 14;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
-            // 
-            // btn_pos
-            // 
-            this.btn_pos.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_pos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pos.Location = new System.Drawing.Point(809, 692);
-            this.btn_pos.Name = "btn_pos";
-            this.btn_pos.Size = new System.Drawing.Size(161, 52);
-            this.btn_pos.TabIndex = 109;
-            this.btn_pos.Text = "POS";
-            this.btn_pos.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_posprint
             // 
             this.btn_posprint.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btn_posprint.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_posprint.Location = new System.Drawing.Point(1005, 692);
+            this.btn_posprint.Location = new System.Drawing.Point(829, 701);
             this.btn_posprint.Name = "btn_posprint";
             this.btn_posprint.Size = new System.Drawing.Size(161, 52);
-            this.btn_posprint.TabIndex = 108;
+            this.btn_posprint.TabIndex = 15;
             this.btn_posprint.Text = "POS Print";
             this.btn_posprint.UseVisualStyleBackColor = false;
             // 
@@ -132,20 +120,13 @@
             // 
             this.button7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(412, 692);
+            this.button7.Location = new System.Drawing.Point(1031, 701);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(161, 52);
             this.button7.TabIndex = 107;
             this.button7.Text = "Clear";
             this.button7.UseVisualStyleBackColor = false;
-            // 
-            // box_qty
-            // 
-            this.box_qty.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box_qty.Location = new System.Drawing.Point(765, 518);
-            this.box_qty.Name = "box_qty";
-            this.box_qty.Size = new System.Drawing.Size(205, 34);
-            this.box_qty.TabIndex = 106;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox1
             // 
@@ -159,7 +140,7 @@
             // box_amount
             // 
             this.box_amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box_amount.Location = new System.Drawing.Point(1163, 517);
+            this.box_amount.Location = new System.Drawing.Point(934, 518);
             this.box_amount.Name = "box_amount";
             this.box_amount.Size = new System.Drawing.Size(191, 34);
             this.box_amount.TabIndex = 104;
@@ -174,7 +155,7 @@
             this.combo_eye.Location = new System.Drawing.Point(628, 518);
             this.combo_eye.Name = "combo_eye";
             this.combo_eye.Size = new System.Drawing.Size(121, 33);
-            this.combo_eye.TabIndex = 103;
+            this.combo_eye.TabIndex = 13;
             // 
             // combo_services
             // 
@@ -190,7 +171,7 @@
             this.combo_services.Location = new System.Drawing.Point(234, 518);
             this.combo_services.Name = "combo_services";
             this.combo_services.Size = new System.Drawing.Size(388, 33);
-            this.combo_services.TabIndex = 102;
+            this.combo_services.TabIndex = 12;
             // 
             // box_cnic
             // 
@@ -198,23 +179,15 @@
             this.box_cnic.Location = new System.Drawing.Point(234, 427);
             this.box_cnic.Name = "box_cnic";
             this.box_cnic.Size = new System.Drawing.Size(515, 34);
-            this.box_cnic.TabIndex = 101;
-            // 
-            // box_gender
-            // 
-            this.box_gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box_gender.Location = new System.Drawing.Point(234, 387);
-            this.box_gender.Name = "box_gender";
-            this.box_gender.Size = new System.Drawing.Size(515, 34);
-            this.box_gender.TabIndex = 100;
+            this.box_cnic.TabIndex = 7;
             // 
             // box_contact
             // 
             this.box_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box_contact.Location = new System.Drawing.Point(987, 173);
+            this.box_contact.Location = new System.Drawing.Point(987, 176);
             this.box_contact.Name = "box_contact";
             this.box_contact.Size = new System.Drawing.Size(367, 34);
-            this.box_contact.TabIndex = 99;
+            this.box_contact.TabIndex = 8;
             // 
             // box_remarks
             // 
@@ -222,12 +195,12 @@
             this.box_remarks.Location = new System.Drawing.Point(987, 354);
             this.box_remarks.Name = "box_remarks";
             this.box_remarks.Size = new System.Drawing.Size(367, 34);
-            this.box_remarks.TabIndex = 98;
+            this.box_remarks.TabIndex = 11;
             // 
             // box_rate
             // 
             this.box_rate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box_rate.Location = new System.Drawing.Point(987, 518);
+            this.box_rate.Location = new System.Drawing.Point(758, 519);
             this.box_rate.Name = "box_rate";
             this.box_rate.Size = new System.Drawing.Size(170, 34);
             this.box_rate.TabIndex = 97;
@@ -238,7 +211,7 @@
             this.box_patiendR.Location = new System.Drawing.Point(987, 305);
             this.box_patiendR.Name = "box_patiendR";
             this.box_patiendR.Size = new System.Drawing.Size(367, 34);
-            this.box_patiendR.TabIndex = 96;
+            this.box_patiendR.TabIndex = 10;
             // 
             // box_age
             // 
@@ -246,12 +219,13 @@
             this.box_age.Location = new System.Drawing.Point(234, 343);
             this.box_age.Name = "box_age";
             this.box_age.Size = new System.Drawing.Size(515, 34);
-            this.box_age.TabIndex = 95;
+            this.box_age.TabIndex = 5;
             // 
             // box_slip
             // 
+            this.box_slip.Enabled = false;
             this.box_slip.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box_slip.Location = new System.Drawing.Point(234, 212);
+            this.box_slip.Location = new System.Drawing.Point(234, 214);
             this.box_slip.Name = "box_slip";
             this.box_slip.Size = new System.Drawing.Size(163, 34);
             this.box_slip.TabIndex = 94;
@@ -262,7 +236,7 @@
             this.box_sdh.Location = new System.Drawing.Point(234, 300);
             this.box_sdh.Name = "box_sdh";
             this.box_sdh.Size = new System.Drawing.Size(515, 34);
-            this.box_sdh.TabIndex = 93;
+            this.box_sdh.TabIndex = 4;
             // 
             // box_name
             // 
@@ -270,7 +244,7 @@
             this.box_name.Location = new System.Drawing.Point(234, 257);
             this.box_name.Name = "box_name";
             this.box_name.Size = new System.Drawing.Size(515, 34);
-            this.box_name.TabIndex = 92;
+            this.box_name.TabIndex = 3;
             // 
             // richbox_address
             // 
@@ -278,14 +252,14 @@
             this.richbox_address.Location = new System.Drawing.Point(987, 222);
             this.richbox_address.Name = "richbox_address";
             this.richbox_address.Size = new System.Drawing.Size(367, 69);
-            this.richbox_address.TabIndex = 91;
+            this.richbox_address.TabIndex = 9;
             this.richbox_address.Text = "";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(1493, 173);
+            this.label20.Location = new System.Drawing.Point(1407, 176);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(147, 29);
             this.label20.TabIndex = 90;
@@ -295,7 +269,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(1208, 483);
+            this.label19.Location = new System.Drawing.Point(979, 484);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(94, 29);
             this.label19.TabIndex = 89;
@@ -305,21 +279,11 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(1039, 483);
+            this.label18.Location = new System.Drawing.Point(810, 484);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 29);
             this.label18.TabIndex = 88;
             this.label18.Text = "Rate";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(839, 483);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(49, 29);
-            this.label17.TabIndex = 87;
-            this.label17.Text = "Qty";
             // 
             // label16
             // 
@@ -455,7 +419,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 215);
+            this.label2.Location = new System.Drawing.Point(30, 222);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 29);
             this.label2.TabIndex = 73;
@@ -495,25 +459,48 @@
             this.lbl_addopd.TabIndex = 70;
             this.lbl_addopd.Text = "OPD Form";
             // 
+            // box_gender
+            // 
+            this.box_gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.box_gender.FormattingEnabled = true;
+            this.box_gender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.box_gender.Location = new System.Drawing.Point(234, 386);
+            this.box_gender.Name = "box_gender";
+            this.box_gender.Size = new System.Drawing.Size(515, 33);
+            this.box_gender.TabIndex = 6;
+            // 
+            // btn_upload
+            // 
+            this.btn_upload.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_upload.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_upload.Location = new System.Drawing.Point(1586, 450);
+            this.btn_upload.Name = "btn_upload";
+            this.btn_upload.Size = new System.Drawing.Size(161, 52);
+            this.btn_upload.TabIndex = 108;
+            this.btn_upload.Text = "Upload";
+            this.btn_upload.UseVisualStyleBackColor = false;
+            this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
+            // 
             // frm_opdadd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1784, 797);
+            this.Controls.Add(this.btn_upload);
+            this.Controls.Add(this.box_gender);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.combo_DoctorsOPD);
             this.Controls.Add(this.btn_save);
-            this.Controls.Add(this.btn_pos);
             this.Controls.Add(this.btn_posprint);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.box_qty);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.box_amount);
             this.Controls.Add(this.combo_eye);
             this.Controls.Add(this.combo_services);
             this.Controls.Add(this.box_cnic);
-            this.Controls.Add(this.box_gender);
             this.Controls.Add(this.box_contact);
             this.Controls.Add(this.box_remarks);
             this.Controls.Add(this.box_rate);
@@ -526,7 +513,6 @@
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -547,6 +533,7 @@
             this.Name = "frm_opdadd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_opdadd";
+            this.Load += new System.EventHandler(this.frm_opdadd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -558,16 +545,13 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox combo_DoctorsOPD;
         private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Button btn_pos;
         private System.Windows.Forms.Button btn_posprint;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox box_qty;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox box_amount;
         private System.Windows.Forms.ComboBox combo_eye;
         private System.Windows.Forms.ComboBox combo_services;
         private System.Windows.Forms.TextBox box_cnic;
-        private System.Windows.Forms.TextBox box_gender;
         private System.Windows.Forms.TextBox box_contact;
         private System.Windows.Forms.TextBox box_remarks;
         private System.Windows.Forms.TextBox box_rate;
@@ -580,7 +564,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
@@ -598,5 +581,7 @@
         private System.Windows.Forms.Label lbl_date;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Label lbl_addopd;
+        private System.Windows.Forms.ComboBox box_gender;
+        private System.Windows.Forms.Button btn_upload;
     }
 }

@@ -32,6 +32,8 @@
             this.btn_addopd = new System.Windows.Forms.Button();
             this.lbl_opd = new System.Windows.Forms.Label();
             this.tbl_opd = new System.Windows.Forms.DataGridView();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_opd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,12 +85,43 @@
             this.tbl_opd.RowTemplate.Height = 24;
             this.tbl_opd.Size = new System.Drawing.Size(1719, 616);
             this.tbl_opd.TabIndex = 8;
+            this.tbl_opd.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbl_opd_CellEnter);
+            // 
+            // Delete
+            // 
+            this.Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.ForeColor = System.Drawing.SystemColors.Window;
+            this.Delete.Location = new System.Drawing.Point(670, 101);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(175, 60);
+            this.Delete.TabIndex = 12;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // Update
+            // 
+            this.Update.BackColor = System.Drawing.Color.Green;
+            this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update.ForeColor = System.Drawing.SystemColors.Window;
+            this.Update.Location = new System.Drawing.Point(477, 102);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(175, 59);
+            this.Update.TabIndex = 11;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = false;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // frm_opdtable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1781, 821);
+            this.Controls.Add(this.Delete);
+            this.Controls.Add(this.Update);
             this.Controls.Add(this.tbl_opd);
             this.Controls.Add(this.btn_backopd);
             this.Controls.Add(this.btn_addopd);
@@ -108,5 +141,7 @@
         private System.Windows.Forms.Button btn_addopd;
         private System.Windows.Forms.Label lbl_opd;
         private System.Windows.Forms.DataGridView tbl_opd;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Update;
     }
 }
