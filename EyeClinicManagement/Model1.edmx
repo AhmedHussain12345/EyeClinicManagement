@@ -4,14 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EyeClinicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Service">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="opdservice" Type="varchar" MaxLength="50" Nullable="false" />
-        </EntityType>
+    <Schema Namespace="EyeClinicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblDoctor">
           <Key>
             <PropertyRef Name="ID" />
@@ -39,7 +32,7 @@
           <Property Name="Cnic" Type="varchar" MaxLength="50" />
           <Property Name="Contact" Type="varchar" MaxLength="50" />
           <Property Name="Address" Type="varchar" MaxLength="100" />
-          <Property Name="Doctoropd" Type="varchar" MaxLength="100" />
+          <Property Name="Doctoropd" Type="int" />
           <Property Name="Reffered" Type="varchar" MaxLength="100" />
           <Property Name="Remarks" Type="varchar" MaxLength="100" />
           <Property Name="Services" Type="varchar" MaxLength="100" />
@@ -48,23 +41,29 @@
           <Property Name="Amount" Type="decimal" Precision="18" Scale="4" />
           <Property Name="Image" Type="varchar" MaxLength="500" />
         </EntityType>
-        <EntityContainer Name="EyeClinicModelStoreContainer">
-          <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tblDoctor" EntityType="Self.tblDoctor" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tblOpd" EntityType="Self.tblOpd" Schema="dbo" store:Type="Tables" />
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
-    <!-- CSDL content -->
-    <edmx:ConceptualModels>
-      <Schema Namespace="EyeClinicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Service">
+        <EntityType Name="tblService">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="opdservice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="opdservice" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Price" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityContainer Name="EyeClinicModelStoreContainer">
+          <EntitySet Name="tblDoctor" EntityType="Self.tblDoctor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblOpd" EntityType="Self.tblOpd" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblService" EntityType="Self.tblService" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EyeClinicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EyeClinicEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblDoctors" EntityType="EyeClinicModel.tblDoctor" />
+          <EntitySet Name="tblOpds" EntityType="EyeClinicModel.tblOpd" />
+          <EntitySet Name="tblServices" EntityType="EyeClinicModel.tblService" />
+        </EntityContainer>
         <EntityType Name="tblDoctor">
           <Key>
             <PropertyRef Name="ID" />
@@ -92,7 +91,7 @@
           <Property Name="Cnic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Doctoropd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Doctoropd" Type="Int32" />
           <Property Name="Reffered" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Services" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -101,60 +100,66 @@
           <Property Name="Amount" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="EyeClinicEntities1" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Services" EntityType="Self.Service" />
-          <EntitySet Name="tblDoctors" EntityType="Self.tblDoctor" />
-          <EntitySet Name="tblOpds" EntityType="Self.tblOpd" />
-        </EntityContainer>
+        <EntityType Name="tblService">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="opdservice" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="EyeClinicModelStoreContainer" CdmEntityContainer="EyeClinicEntities1">
-          <EntitySetMapping Name="Services">
-            <EntityTypeMapping TypeName="EyeClinicModel.Service">
-              <MappingFragment StoreEntitySet="Service">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="opdservice" ColumnName="opdservice" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tblDoctors">
             <EntityTypeMapping TypeName="EyeClinicModel.tblDoctor">
               <MappingFragment StoreEntitySet="tblDoctor">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Age" ColumnName="Age" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Specialization" ColumnName="Specialization" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Message" ColumnName="Message" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Specialization" ColumnName="Specialization" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblOpds">
             <EntityTypeMapping TypeName="EyeClinicModel.tblOpd">
               <MappingFragment StoreEntitySet="tblOpd">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="Slipno" ColumnName="Slipno" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Relation" ColumnName="Relation" />
-                <ScalarProperty Name="Age" ColumnName="Age" />
-                <ScalarProperty Name="Gender" ColumnName="Gender" />
-                <ScalarProperty Name="Cnic" ColumnName="Cnic" />
-                <ScalarProperty Name="Contact" ColumnName="Contact" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Doctoropd" ColumnName="Doctoropd" />
-                <ScalarProperty Name="Reffered" ColumnName="Reffered" />
-                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
-                <ScalarProperty Name="Services" ColumnName="Services" />
-                <ScalarProperty Name="Eye" ColumnName="Eye" />
-                <ScalarProperty Name="Rate" ColumnName="Rate" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Eye" ColumnName="Eye" />
+                <ScalarProperty Name="Services" ColumnName="Services" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Reffered" ColumnName="Reffered" />
+                <ScalarProperty Name="Doctoropd" ColumnName="Doctoropd" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="Cnic" ColumnName="Cnic" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Relation" ColumnName="Relation" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Slipno" ColumnName="Slipno" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblServices">
+            <EntityTypeMapping TypeName="EyeClinicModel.tblService">
+              <MappingFragment StoreEntitySet="tblService">
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="opdservice" ColumnName="opdservice" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

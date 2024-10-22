@@ -115,6 +115,7 @@
             this.btn_posprint.TabIndex = 15;
             this.btn_posprint.Text = "POS Print";
             this.btn_posprint.UseVisualStyleBackColor = false;
+            this.btn_posprint.Click += new System.EventHandler(this.btn_posprint_Click);
             // 
             // button7
             // 

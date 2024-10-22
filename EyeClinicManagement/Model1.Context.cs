@@ -25,8 +25,8 @@ namespace EyeClinicManagement
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<tblDoctor> tblDoctors { get; set; }
         public virtual DbSet<tblOpd> tblOpds { get; set; }
+        public virtual DbSet<tblService> tblServices { get; set; }
     }
 }

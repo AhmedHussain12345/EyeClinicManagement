@@ -37,7 +37,7 @@ namespace EyeClinicManagement.OPD
 
         void DataGrid()
         {
-            tbl_opd.DataSource = db.tblOpds.ToList();
+            tbl_opd.DataSource = db.tblOpds.ToList<tblOpd>();
         }
 
         private void tbl_opd_CellEnter(object sender, DataGridViewCellEventArgs e)

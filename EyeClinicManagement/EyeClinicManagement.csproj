@@ -103,6 +103,7 @@
     <Compile Include="OPD\frm_opdtable.Designer.cs">
       <DependentUpon>frm_opdtable.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintToken\PrintHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\frm_reportadd.cs">
@@ -111,13 +112,13 @@
     <Compile Include="Reports\frm_reportadd.Designer.cs">
       <DependentUpon>frm_reportadd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Service.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="tblDoctor.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="tblOpd.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblService.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Doctor\frm_doctoradd.resx">

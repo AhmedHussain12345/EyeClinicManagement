@@ -12,9 +12,11 @@ namespace EyeClinicManagement
     using System;
     using System.Collections.Generic;
     
-    public partial class Service
+    public partial class tblService
     {
         public int ID { get; set; }
         public string opdservice { get; set; }
+        public string Price { get; set; }
+        public bool Enabled { get; set; }
     }
 }

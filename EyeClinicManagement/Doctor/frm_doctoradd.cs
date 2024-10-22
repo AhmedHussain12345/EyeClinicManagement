@@ -39,8 +39,7 @@ namespace EyeClinicManagement.Doctor
                 textBox_specialization.Text = student.Specialization;
                 richTextBox_address.Text = student.Address;
                 richTextBox_msg.Text = student.Message;
-                ///  c:llkj/llklj/lkjlkj/bin/1.jpeg
-                ///  c:llkj/llklj/lkjlkj/bin/2.jpeg
+             
 
             }
         }
@@ -147,9 +146,11 @@ namespace EyeClinicManagement.Doctor
                 Directory.CreateDirectory(imagePath);
             }
 
-            string fileName = Path.GetFileName(dialog.FileName);
+            //string fileName = Path.GetFileName(dialog.FileName);
 
-            
+            string fileName = (db.tblDoctors.Count() + 1) + Path.GetExtension(dialog.FileName);
+
+
 
 
             string saveImagePath = imagePath + "/" + fileName;
