@@ -47,6 +47,7 @@
             this.btn_settings.TabIndex = 18;
             this.btn_settings.Text = "Settings";
             this.btn_settings.UseVisualStyleBackColor = false;
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
             // btn_reports
             // 

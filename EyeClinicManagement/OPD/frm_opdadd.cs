@@ -105,7 +105,7 @@ namespace EyeClinicManagement.OPD
                         model.Cnic = box_cnic.Text.Trim();
                         model.Contact = box_contact.Text.Trim();
                         model.Address = richbox_address.Text.Trim();
-                        model.Doctoropd = combo_DoctorsOPD.SelectedItem.ToString();
+                        model.Doctoropd = (int)combo_DoctorsOPD.SelectedValue;
                         model.Reffered = box_patiendR.Text.Trim();
                         model.Remarks = box_remarks.Text.Trim();
                         model.Services = combo_services.SelectedValue.ToString();

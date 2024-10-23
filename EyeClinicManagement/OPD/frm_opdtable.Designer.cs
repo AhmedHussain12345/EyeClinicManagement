@@ -129,6 +129,7 @@
             this.Name = "frm_opdtable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_opdtable";
+            this.Load += new System.EventHandler(this.frm_opdtable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbl_opd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -28,5 +28,11 @@ namespace EyeClinicManagement.MainScreen
             OPD.frm_opdtable form = new OPD.frm_opdtable();
             form.ShowDialog();
         }
+
+        private void btn_settings_Click(object sender, EventArgs e)
+        {
+            Settings.frm_servicetable form=new Settings.frm_servicetable();
+            form.ShowDialog();
+        }
     }
 }

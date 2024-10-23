@@ -109,7 +109,7 @@
             // 
             this.btn_posprint.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btn_posprint.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_posprint.Location = new System.Drawing.Point(829, 701);
+            this.btn_posprint.Location = new System.Drawing.Point(828, 701);
             this.btn_posprint.Name = "btn_posprint";
             this.btn_posprint.Size = new System.Drawing.Size(161, 52);
             this.btn_posprint.TabIndex = 15;

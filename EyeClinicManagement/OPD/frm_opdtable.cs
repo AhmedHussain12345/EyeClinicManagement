@@ -37,7 +37,27 @@ namespace EyeClinicManagement.OPD
 
         void DataGrid()
         {
-            tbl_opd.DataSource = db.tblOpds.ToList<tblOpd>();
+            var doctors = db.tblDoctors;
+            tbl_opd.DataSource = db.tblOpds.Select(opd => new
+            {
+                opd.ID,
+                opd.Name,
+                opd.Date,
+                opd.Cnic,
+                opd.Contact,
+                opd.Address,
+                opd.Age,
+                opd.Reffered,
+                opd.Remarks,
+                opd.Eye,
+                opd.Services,
+                opd.Relation,
+                opd.Gender,
+                opd.Rate,
+                opd.Amount,
+                Doctor = doctors.Any(x => x.ID == opd.Doctoropd) ? doctors.FirstOrDefault(d => d.ID == opd.Doctoropd).Name : "",
+            }).ToList();
+            
         }
 
         private void tbl_opd_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -75,6 +95,11 @@ namespace EyeClinicManagement.OPD
                 MessageBox.Show("You have cancel the delete operation", "Message");
             }
             DataGrid();
+        }
+
+        private void frm_opdtable_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -112,6 +112,18 @@
     <Compile Include="Reports\frm_reportadd.Designer.cs">
       <DependentUpon>frm_reportadd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings\frm_serviceadd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frm_serviceadd.Designer.cs">
+      <DependentUpon>frm_serviceadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frm_servicetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frm_servicetable.Designer.cs">
+      <DependentUpon>frm_servicetable.cs</DependentUpon>
+    </Compile>
     <Compile Include="tblDoctor.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -147,6 +159,12 @@
     </Compile>
     <EmbeddedResource Include="Reports\frm_reportadd.resx">
       <DependentUpon>frm_reportadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frm_serviceadd.resx">
+      <DependentUpon>frm_serviceadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frm_servicetable.resx">
+      <DependentUpon>frm_servicetable.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
