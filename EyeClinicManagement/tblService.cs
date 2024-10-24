@@ -16,7 +16,7 @@ namespace EyeClinicManagement
     {
         public int ID { get; set; }
         public string opdservice { get; set; }
-        public string Price { get; set; }
         public bool Enabled { get; set; }
+        public Nullable<decimal> Price { get; set; }
     }
 }

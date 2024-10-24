@@ -49,6 +49,7 @@
             this.Delete.TabIndex = 18;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // Update
             // 
@@ -62,6 +63,7 @@
             this.Update.TabIndex = 17;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = false;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // tbl_service
             // 
@@ -76,6 +78,7 @@
             this.tbl_service.Size = new System.Drawing.Size(1087, 616);
             this.tbl_service.TabIndex = 16;
             this.tbl_service.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbl_service_CellContentClick);
+            this.tbl_service.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbl_service_CellEnter);
             // 
             // btn_backservice
             // 
@@ -89,6 +92,7 @@
             this.btn_backservice.TabIndex = 15;
             this.btn_backservice.Text = "Back";
             this.btn_backservice.UseVisualStyleBackColor = false;
+            this.btn_backservice.Click += new System.EventHandler(this.btn_backservice_Click);
             // 
             // btn_addopd
             // 

@@ -34,5 +34,11 @@ namespace EyeClinicManagement.MainScreen
             Settings.frm_servicetable form=new Settings.frm_servicetable();
             form.ShowDialog();
         }
+
+        private void btn_reports_Click(object sender, EventArgs e)
+        {
+            Reports.frm_reportadd form = new Reports.frm_reportadd();
+            form.ShowDialog();
+        }
     }
 }

@@ -28,6 +28,7 @@ namespace EyeClinicManagement
         public string Reffered { get; set; }
         public string Remarks { get; set; }
         public string Services { get; set; }
+
         public string Eye { get; set; }
         public Nullable<decimal> Rate { get; set; }
         public Nullable<decimal> Amount { get; set; }

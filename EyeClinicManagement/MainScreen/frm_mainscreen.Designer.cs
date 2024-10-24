@@ -45,7 +45,7 @@
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.Size = new System.Drawing.Size(311, 82);
             this.btn_settings.TabIndex = 18;
-            this.btn_settings.Text = "Settings";
+            this.btn_settings.Text = "Services";
             this.btn_settings.UseVisualStyleBackColor = false;
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
@@ -61,6 +61,7 @@
             this.btn_reports.TabIndex = 17;
             this.btn_reports.Text = "Reports";
             this.btn_reports.UseVisualStyleBackColor = false;
+            this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
             // 
             // btn_surgery
             // 

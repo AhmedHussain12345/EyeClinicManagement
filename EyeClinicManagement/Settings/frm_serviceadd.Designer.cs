@@ -51,6 +51,7 @@
             this.Clear.TabIndex = 45;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // lbl_docfrmheading
             // 
@@ -74,6 +75,7 @@
             this.btn_docsubmit.TabIndex = 37;
             this.btn_docsubmit.Text = "Submit";
             this.btn_docsubmit.UseVisualStyleBackColor = false;
+            this.btn_docsubmit.Click += new System.EventHandler(this.btn_docsubmit_Click);
             // 
             // textBox_price
             // 
@@ -130,6 +132,9 @@
             this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
             this.comboBox1.Location = new System.Drawing.Point(159, 206);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(385, 37);
